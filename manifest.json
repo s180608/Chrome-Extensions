@@ -1,0 +1,29 @@
+{
+    "name" : "YouTube Darkmode",
+    "version" : "1.0.0",
+    "description": "This background turns YouTube into Darkmode",
+    "manifest_version" : 3,
+    "background": {
+        "service_worker": "background.js"
+      },
+      "content_scripts" : [
+        {
+            "matches" : ["https://*.youtube.com/*"],
+            "js":["content.js"]
+            
+        }        
+      ],
+    "permissions":[
+        "bookmarks"
+    ],
+    "icons": {
+        "16": "icondark.png",
+        "48":"icondark.png",
+        "128":"icondark.png"
+    },
+    "action": {
+        "default_title":"created by chaitanya!!! enjoy the Darkmode :)",
+        "default_popup": "popup.html"
+    }
+
+}
